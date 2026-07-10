@@ -4,3 +4,22 @@
 [2026-07-10 13:12:05] WARNING  app — 404 Not Found: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
 [2026-07-10 13:48:46] INFO     app — DevOps Task Manager started in 'development' mode.
 [2026-07-10 13:48:47] INFO     app — DevOps Task Manager started in 'development' mode.
+[2026-07-10 14:51:53] INFO     app — DevOps Task Manager started in 'development' mode.
+[2026-07-10 14:52:05] INFO     app — DevOps Task Manager started in 'development' mode.
+[2026-07-10 14:53:26] INFO     app — DevOps Task Manager started in 'development' mode.
+[2026-07-10 14:53:34] INFO     app — DevOps Task Manager started in 'development' mode.
+[2026-07-10 15:01:48] INFO     app — DevOps Task Manager started in 'development' mode.
+[2026-07-10 15:01:49] INFO     app — DevOps Task Manager started in 'development' mode.
+[2026-07-10 15:02:04] WARNING  app — 404 Not Found: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+[2026-07-10 15:02:12] WARNING  app — Failed login attempt for username='admin' from IP=192.168.1.6
+[2026-07-10 15:02:17] WARNING  app — Failed login attempt for username='admin' from IP=192.168.1.6
+[2026-07-10 15:02:24] WARNING  app — Failed login attempt for username='root' from IP=192.168.1.6
+[2026-07-10 15:02:33] WARNING  app — Failed login attempt for username='admin' from IP=192.168.1.6
+[2026-07-10 15:02:44] WARNING  app — Failed login attempt for username='admin' from IP=192.168.1.6
+[2026-07-10 15:02:48] WARNING  app — Failed login attempt for username='admin' from IP=192.168.1.6
+[2026-07-10 15:04:15] INFO     app — New user registered: 'admin'
+[2026-07-10 15:04:23] INFO     app — User 'admin' logged in from 192.168.1.6
+[2026-07-10 15:04:23] DEBUG    app — Dashboard loaded for user=admin: total=0, overdue=0
+[2026-07-10 15:04:53] DEBUG    app — Tasks list: user=admin, filter=, q='', page=1
+[2026-07-10 15:04:55] DEBUG    app — Dashboard loaded for user=admin: total=0, overdue=0
+[2026-07-10 15:07:40] INFO     app — User 'admin' logged out.
