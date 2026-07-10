@@ -1,0 +1,20 @@
+# Initialize Git
+git init
+
+# Check status
+git status
+
+# Add all project files
+git add .
+
+# Commit files
+git commit -m "Initial Flask application"
+
+# Rename branch to main
+git branch -M main
+
+# Add GitHub repository
+git remote add origin https://github.com/<YOUR_GITHUB_USERNAME>/enterprise-devops-platform.git
+
+# Push to GitHub
+git push -u origin main
