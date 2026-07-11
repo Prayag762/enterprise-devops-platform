@@ -1,0 +1,41 @@
+---
+- name: Configure Enterprise DevOps Application Server
+  hosts: appserver
+  become: yes
+
+  tasks:
+
+    - name: Update apt packages
+      apt:
+        update_cache: yes
+
+    - name: Install Docker
+      apt:
+        name: docker.io
+        state: present
+
+    - name: Enable Docker service
+      service:
+        name: docker
+        state: started
+        enabled: yes
+
+    - name: Pull latest Docker image
+      docker_image:
+        name: prayag1/enterprise-devops-platform
+        source: pull
+
+    - name: Stop existing container
+      docker_container:
+        name: devops-platform
+        state: absent
+      ignore_errors: yes
+
+    - name: Run Enterprise DevOps Platform
+      docker_container:
+        name: devops-platform
+        image: prayag1/enterprise-devops-platform:latest
+        state: started
+        restart_policy: always
+        ports:
+          - "5000:5000"
