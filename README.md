@@ -150,9 +150,13 @@ flowchart LR
     style J fill:#e3f2fd,stroke:#1565c0
     style K fill:#c8e6c9,stroke:#388e3c
 ```
+
 ## ☁ AWS Architecture
+
 The complete AWS infrastructure is provisioned using Terraform.
+
 ### 🏗️ Infrastructure Components
+
 Resources Created
 ✅ Amazon VPC
 ✅ Public Subnets
