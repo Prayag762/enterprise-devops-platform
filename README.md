@@ -7,7 +7,7 @@
 
 
 
-			## Enterprise DevOps Platform Architecture
+## Enterprise DevOps Platform Architecture
 
 ```mermaid
 flowchart LR
@@ -49,7 +49,7 @@ classDef compute fill:#fce4ec,stroke:#c2185b,stroke-width
 
 
 
-The Enterprise DevOps Task Management Platform is a cloud-native, production-ready web application developed to demonstrate a complete DevOps lifecycle using modern tools and AWS cloud services. The project automates application deployment, infrastructure provisioning, monitoring, and scaling through an end-to-end CI/CD pipeline.
+# The Enterprise DevOps Task Management Platform is a cloud-native, production-ready web application developed to demonstrate a complete DevOps lifecycle using modern tools and AWS cloud services. The project automates application deployment, infrastructure provisioning, monitoring, and scaling through an end-to-end CI/CD pipeline.
 
 The application is built using Python Flask with a MySQL database (Amazon RDS in production) and is fully containerized using Docker. Source code is maintained in GitHub, while Jenkins automates the build, test, Docker image creation, and deployment process. Docker images are stored in Docker Hub.
 
