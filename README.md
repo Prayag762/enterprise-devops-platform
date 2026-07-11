@@ -1,4 +1,7 @@
-# Enterprise DevOps Task Management Platform
+# 🚀 Enterprise DevOps Task Management Platform
+### Zero-Touch CI/CD | Multi-Region High Availability | Infrastructure as Code on AWS
+
+> Architected and deployed a production-grade, multi-region AWS platform with fully automated CI/CD (Jenkins, Docker), Infrastructure as Code (Terraform, Ansible), and Kubernetes-orchestrated container deployment — taking every release from `git push` to production with zero manual intervention.
 
 ## Project Overview
 
