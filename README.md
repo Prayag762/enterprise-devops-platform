@@ -96,25 +96,23 @@ flowchart TB
     Jenkins -->|"3. Checkout Code"| GitHub
     Jenkins -->|"4. Build Docker Image"| DockerBuild
     DockerBuild -->|"5. Push to Registry"| DockerPush
-    DockerPush -->|"6. Deploy to K8s"| K8s
+    DockerPush -->|"6. Deploy to K8s"| API
     
     %% Kubernetes Internal Flow
-    K8s -->|"7. Schedule Pods on EC2"| Workers
+    Control -->|"7. Schedule Pods on EC2"| Workers
     Workers -->|"8. Expose Application"| Service
     Service -->|"9. Route Traffic"| ALB
     ALB -->|"10. User Access via Browser"| Users
     
     %% Data & Infrastructure
-    K8s -->|"11. Store Persistent Data"| RDS
-    K8s -->|"12. Store Static Files"| S3
-    K8s -->|"13. Provision Infrastructure"| Terraform
-    Terraform -->|"14. Provision AWS Resources"| AWS
-    K8s -->|"15. Configure Cluster"| Ansible
-    Ansible -->|"16. Apply Configuration"| K8s
+    Workers -->|"11. Store Persistent Data"| RDS
+    Workers -->|"12. Store Static Files"| S3
+    Terraform -->|"13. Provision Infrastructure"| ALB
+    Ansible -->|"14. Configure Cluster"| API
     
     %% Monitoring
-    K8s -->|"17. Scrape Metrics"| Prometheus
-    Prometheus -->|"18. Visualize Dashboards"| Grafana
+    Workers -->|"15. Scrape Metrics"| Prometheus
+    Prometheus -->|"16. Visualize Dashboards"| Grafana
 
     %% Developer Style - RED
     style Developer fill:#ff4444,stroke:#cc0000,stroke-width:4px,color:#ffffff,font-size:18px,font-weight:bold
@@ -134,7 +132,8 @@ flowchart TB
     style Storage fill:#fff8e1,stroke:#f57f17,stroke-width:2px
 
     %% Pure Black Arrows
-    linkStyle default stroke:#000000,stroke-width:3px,color:#000000
+    linkStyle default stroke:black,stroke-width:3px,color:black
+
 ```
 🔄 CI/CD Pipeline Workflow
 
@@ -154,6 +153,7 @@ flowchart LR
     J --> K[Application Live]
     
     classDef default fill:#0ea5e9,stroke:#0284c7,stroke-width:2px,color:#ffffff;
+
 ```
 
 ## ☁ AWS Architecture
