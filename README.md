@@ -13,6 +13,42 @@ Application configuration and software installation are automated using Ansible,
 
 The platform is deployed across two AWS regions connected through VPC Peering, providing high availability and disaster recovery capabilities.
 
+
+
+## Enterprise DevOps Platform Architecture
+
+```mermaid
+flowchart LR
+
+A[Developer] -->|Git Push| B[GitHub Repository]
+B -->|Webhook| C[Jenkins CI/CD]
+C -->|Build Docker Image| D[Docker]
+D -->|Push Image| E[Docker Hub]
+C -->|Deploy Latest Image| F[Docker Container on EC2]
+
+subgraph AWS Cloud
+    G[Application EC2]
+    H[(Amazon RDS MySQL)]
+    I[S3 Bucket]
+    J[VPC]
+    K[Public Subnet]
+    L[Private Subnet]
+    M[Security Groups]
+
+    G --> H
+    G --> I
+end
+
+F --> G
+User[Browser] -->|HTTP :5000| G
+J --> K
+J --> L
+K --> G
+L --> H
+M --> G
+M --> H
+```
+
 Monitoring and observability are implemented using Prometheus, Grafana, and Amazon CloudWatch, offering real-time dashboards, application metrics, infrastructure monitoring, and centralized logging.
 
 The project demonstrates modern DevOps practices including Infrastructure as Code, Continuous Integration, Continuous Deployment, Containerization, Configuration Management, Monitoring, Multi-Region Architecture, and High Availability.
