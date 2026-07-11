@@ -23,3 +23,18 @@
 [2026-07-10 15:04:53] DEBUG    app — Tasks list: user=admin, filter=, q='', page=1
 [2026-07-10 15:04:55] DEBUG    app — Dashboard loaded for user=admin: total=0, overdue=0
 [2026-07-10 15:07:40] INFO     app — User 'admin' logged out.
+[2026-07-10 22:30:59] INFO     app — DevOps Task Manager started in 'development' mode.
+[2026-07-10 22:31:00] INFO     app — DevOps Task Manager started in 'development' mode.
+[2026-07-10 22:31:19] WARNING  app — 404 Not Found: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+[2026-07-10 22:31:26] INFO     app — User 'admin' logged in from 192.168.1.6
+[2026-07-10 22:31:26] DEBUG    app — Dashboard loaded for user=admin: total=0, overdue=0
+[2026-07-10 22:33:16] DEBUG    app — Tasks list: user=admin, filter=, q='', page=1
+[2026-07-10 22:33:44] INFO     app — Task created: id=1 title='tomoorw plan' by user=admin
+[2026-07-10 22:33:44] DEBUG    app — Tasks list: user=admin, filter=, q='', page=1
+[2026-07-10 22:33:51] INFO     app — Task updated: id=1 title='tomoorw plan' by user=admin
+[2026-07-10 22:33:51] DEBUG    app — Tasks list: user=admin, filter=, q='', page=1
+[2026-07-10 22:34:00] INFO     app — Task updated: id=1 title='tomoorw plan' by user=admin
+[2026-07-10 22:34:00] DEBUG    app — Tasks list: user=admin, filter=, q='', page=1
+[2026-07-10 22:34:35] DEBUG    app — Dashboard loaded for user=admin: total=1, overdue=0
+[2026-07-10 22:34:42] DEBUG    app — Dashboard loaded for user=admin: total=1, overdue=0
+[2026-07-10 22:35:00] INFO     app — User 'admin' logged out.
