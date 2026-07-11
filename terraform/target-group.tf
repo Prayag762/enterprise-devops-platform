@@ -1,0 +1,24 @@
+resource "aws_lb_target_group" "app" {
+  name     = "enterprise-devops-tg"
+  port     = 5000
+  protocol = "HTTP"
+  vpc_id   = aws_vpc.main.id
+
+  health_check {
+    path = "/"
+    port = "5000"
+
+    protocol = "HTTP"
+
+    healthy_threshold   = 2
+    unhealthy_threshold = 2
+
+    interval = 30
+    timeout  = 5
+  }
+
+  tags = {
+    Name = "enterprise-devops-target-group"
+  }
+}
+
