@@ -1,18 +1,16 @@
-<!-- ANIMATED HEADER -->
-<div align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=32&duration=3000&pause=500&color=36BCF7&center=true&vCenter=true&width=600&lines=Hello%2C+I'm+Prayag+Dutt;DevOps+Engineer;Cloud+Architect;Automation+Enthusiast" alt="Typing Animation" />
-</div>
-<!-- PROFILE BADGES -->
-<div align="center">
-  <a href="https://github.com/Prayag762"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"/></a>
-  <a href="https://linkedin.com/in/prayag-dutt"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
-  <a href="mailto:prayag.dutt@email.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white"/></a>
-  <img src="https://komarev.com/ghpvc/?username=Prayag762&style=for-the-badge&color=blueviolet" alt="Profile Views" />
-</div>
-<!-- BANNER -->
-<div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=100&section=header&text=DevOps%20Engineer&fontSize=30&fontAlignY=40" width="100%" />
-</div>
+<!-- Typing Animation -->
+<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=32&duration=3000&pause=500&color=8B5CF6&center=true&vCenter=true&width=600&lines=Hello%2C+I'm+Prayag+Dutt;DevOps+Engineer;Cloud+Architect;Automation+Enthusiast" alt="Typing Animation" />
+
+<!-- Profile Views -->
+<img src="https://komarev.com/ghpvc/?username=Prayag762&style=for-the-badge&color=8B5CF6" alt="Profile Views" />
+
+<!-- Social Badges -->
+<a href="https://github.com/Prayag762"><img src="https://img.shields.io/badge/GitHub-8B5CF6?style=for-the-badge&logo=github&logoColor=white"/></a>
+<a href="https://linkedin.com/in/prayag-dutt"><img src="https://img.shields.io/badge/LinkedIn-8B5CF6?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
+<a href="mailto:prayag.dutt@email.com"><img src="https://img.shields.io/badge/Email-8B5CF6?style=for-the-badge&logo=gmail&logoColor=white"/></a>
+
+<!-- Banner -->
+<img src="https://capsule-render.vercel.app/api?type=waving&color=F5F7FA,E8ECF0&height=100&section=header&text=DevOps%20Engineer&fontSize=30&fontAlignY=40&textColor=9CA3AF" width="100%" />
 ---
 # 🚀 Enterprise DevOps Task Management Platform
 
