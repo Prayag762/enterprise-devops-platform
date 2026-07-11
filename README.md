@@ -15,14 +15,20 @@
 </div>
 ---
 # 🚀 Enterprise DevOps Task Management Platform
+
 ### End-to-End CI/CD Pipeline | AWS | Terraform | Docker | Jenkins | Kubernetes | Ansible | Grafana
+
 > A production-style cloud-native DevOps project demonstrating Infrastructure as Code (IaC), Continuous Integration & Continuous Deployment (CI/CD), containerization, Kubernetes orchestration, and AWS cloud deployment.
+
 ---
+
 ## 📖 Project Overview
+
 The **Enterprise DevOps Task Management Platform** demonstrates a complete DevOps lifecycle from infrastructure provisioning to application deployment using modern DevOps tools and AWS cloud services.
+
 The application is built using **Python Flask** with **Amazon RDS MySQL** as the backend database. Infrastructure is provisioned using **Terraform**, containerized using **Docker**, and deployed automatically through **Jenkins CI/CD**. Kubernetes deployment manifests are included to demonstrate container orchestration and production deployment readiness.
+
 The project follows enterprise DevOps practices including Infrastructure as Code, automated deployments, containerization, and cloud-native architecture.
----
 
 ## 🏗 Architecture Diagram
 
@@ -443,63 +449,47 @@ This project demonstrates practical experience with:
 - 🔐 Security Best Practices
 ---
 ## 👨💻 Author
+
 **Prayag Dutt**
-DevOps Engineer | AWS | Docker | Kubernetes | Terraform | Jenkins | Ansible | Python | Linux | CI/CD
-**Prayag Dutt** <br/>
-*DevOps Engineer | AWS | Docker | Kubernetes | Terraform | Jenkins | Ansible | Python | Linux | CI/CD*
-<div align="center"> <a href="https://github.com/Prayag762"> <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" /> </a> <a href="https://linkedin.com/in/prayag-dutt"> <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" /> </a> <a href="mailto:prayag.dutt@email.com"> <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" /> </a> </div>
-<div align="center">
-  <a href="https://github.com/Prayag762">
-    <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" />
-  </a>
-  <a href="https://linkedin.com/in/prayag-dutt">
-    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" />
-  </a>
-  <a href="mailto:prayag.dutt@email.com">
-    <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" />
-  </a>
-</div>
-## 📊 GitHub Analytics
-<div align="center"> <img src="https://github-readme-stats.vercel.app/api?username=Prayag762&show_icons=true&count_private=true&hide_border=true&title_color=36BCF7&icon_color=36BCF7&text_color=c9d1d9&bg_color=0d1117" alt="GitHub Stats" width="48%" /> <img src="https://github-readme-streak-stats.herokuapp.com/?user=Prayag762&hide_border=true&background=0d1117&stroke=36BCF7&ring=36BCF7&fire=36BCF7&currStreakNum=c9d1d9&sideLabels=36BCF7&sideNums=c9d1d9" alt="GitHub Streak" width="48%" /> </div><div align="center"> <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Prayag762&layout=compact&hide_border=true&title_color=36BCF7&text_color=c9d1d9&bg_color=0d1117" alt="Top Languages" width="40%" /> </div>
-<div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Prayag762&show_icons=true&count_private=true&hide_border=true&title_color=36BCF7&icon_color=36BCF7&text_color=c9d1d9&bg_color=0d1117" alt="GitHub Stats" width="48%" />
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Prayag762&hide_border=true&background=0d1117&stroke=36BCF7&ring=36BCF7&fire=36BCF7&currStreakNum=c9d1d9&sideLabels=36BCF7&sideNums=c9d1d9" alt="GitHub Streak" width="48%" />
-</div>
-<br/>
-<div align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Prayag762&layout=compact&hide_border=true&title_color=36BCF7&text_color=c9d1d9&bg_color=0d1117" alt="Top Languages" width="40%" />
-</div>
-## 🏆 GitHub Trophies
-<div align="center"> <img src="https://github-profile-trophy.vercel.app/?username=Prayag762&theme=onedark&no-frame=true&row=2&column=4" alt="GitHub Trophies" /> </div>
-<div align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=Prayag762&theme=onedark&no-frame=true&row=2&column=4" alt="GitHub Trophies" />
-</div>
-## 📈 Contribution Graph
-<img src="https://activity-graph.herokuapp.com/graph?username=Prayag762&custom_title=Prayag's%20Contribution%20Graph&bg_color=0d1117&color=36BCF7&line=36BCF7&point=FFFFFF&hide_border=true" />
-<div align="center">
-  <img src="https://activity-graph.herokuapp.com/graph?username=Prayag762&custom_title=Prayag's%20Contribution%20Graph&bg_color=0d1117&color=36BCF7&line=36BCF7&point=FFFFFF&hide_border=true" />
-</div>
+
 ## 🤝 Let's Connect!
-I'm always open to collaborating on interesting projects or discussing DevOps best practices.
-<div align="center"> <a href="https://github.com/Prayag762"> <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" /> </a> <a href="https://linkedin.com/in/prayag-dutt"> <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" /> </a> <a href="mailto:prayag.dutt@email.com"> <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" /> </a> <a href="#"> <img src="https://img.shields.io/badge/Portfolio-FF5722?style=for-the-badge&logo=google-chrome&logoColor=white" /> </a> </div>
-<div align="center"> <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=100&section=footer" width="100%" /> </div><div align="center"> <b>⭐ If this project helped you, don't forget to star the repository! ⭐</b> </div>
+
 <div align="center">
-  <a href="https://github.com/Prayag762">
-    <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" />
-  </a>
-  <a href="https://linkedin.com/in/prayag-dutt">
-    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" />
-  </a>
-  <a href="mailto:prayag.dutt@email.com">
-    <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" />
-  </a>
-  <a href="#">
-    <img src="https://img.shields.io/badge/Portfolio-FF5722?style=for-the-badge&logo=google-chrome&logoColor=white" />
-  </a>
+  <p style="color: #8b949e; max-width: 550px; margin: 0 auto 25px;">
+    Always open to collaborations, DevOps discussions, or just a friendly chat. 
+    Let's build something amazing together! 🚀
+  </p>
+
+  <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
+    <a href="https://github.com/Prayag762"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"/></a>
+    <a href="https://linkedin.com/in/prayag-dutt"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
+    <a href="mailto:prayag.dutt@email.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white"/></a>
+    <a href="#"><img src="https://img.shields.io/badge/Portfolio-FF5722?style=for-the-badge&logo=google-chrome&logoColor=white"/></a>
+  </div>
+
+  <br />
+
+  <div style="padding: 15px 20px; background: rgba(54, 188, 247, 0.05); border-radius: 10px; border-left: 3px solid #36BCF7;">
+    <p style="margin: 0; color: #c9d1d9;">
+      ⭐ <strong style="color: #36BCF7;">Star this repo</strong> if you found it valuable — it helps others discover this project!
+    </p>
+  </div>
+
+  <br />
+
+  <p style="color: #8b949e; font-size: 0.85rem;">
+    Made with ☕ and ❤️ using DevOps
+  </p>
 </div>
+
+---
+
 <div align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=100&section=footer" width="100%" />
 </div>
+
 <div align="center">
-  <b>⭐ If this project helped you, don't forget to star the repository! ⭐</b>
+  <b style="background: linear-gradient(135deg, #667eea, #764ba2); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-size: 1.1rem;">
+    ⭐ If this project helped you, don't forget to star the repository! ⭐
+  </b>
 </div>
