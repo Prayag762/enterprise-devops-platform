@@ -41,99 +41,116 @@ The project follows enterprise DevOps practices including Infrastructure as Code
 
 ```mermaid
 flowchart TB
-    %% TOP - Developer (Code Provider)
-    Developer["👨‍💻 Developer"]
+    %% ==================== TOP LAYER ====================
+    Developer["👨‍💻 Developer"] -->|"1. Write & Push Code"| GitHub
     
-    %% USERS Column (Bottom)
-    Users["👥 End Users"]
-    
-    %% CI/CD Pipeline
-    subgraph CI["CI/CD Pipeline"]
+    %% ==================== CI/CD PIPELINE ====================
+    subgraph CI["🔄 CI/CD Pipeline"]
         GitHub["📦 GitHub Repository"]
         Jenkins["⚙️ Jenkins CI/CD"]
-        DockerBuild["🐳 Build Docker Image"]
+        DockerBuild["🐳 Build Image"]
         DockerPush["📤 Push to Docker Hub"]
+        
+        GitHub -->|"2. Webhook Trigger"| Jenkins
+        Jenkins -->|"3. Checkout"| GitHub
+        Jenkins -->|"4. Build"| DockerBuild
+        DockerBuild -->|"5. Push"| DockerPush
     end
-    
-    %% Kubernetes on EC2
-    subgraph K8s["Kubernetes Cluster (AWS EC2)"]
-        subgraph Workers["Worker Nodes (EC2 Instances)"]
+
+    %% ==================== KUBERNETES CLUSTER ====================
+    subgraph K8s["☸️ Kubernetes Cluster (AWS EC2)"]
+        direction TB
+        
+        subgraph ControlPlane["🎛️ Control Plane"]
+            API["⚙️ API Server"]
+            Scheduler["📅 Scheduler"]
+            API <--> Scheduler
+        end
+        
+        subgraph WorkerNodes["💻 Worker Nodes"]
             Pod1["📦 Pod 1"]
             Pod2["📦 Pod 2"]
             Pod3["📦 Pod 3"]
         end
-        subgraph Control["Control Plane"]
-            API["⚙️ API Server"]
-            Scheduler["📅 Scheduler"]
-        end
+        
         Service["🔄 Kubernetes Service"]
+        
+        ControlPlane -->|"Schedule"| WorkerNodes
+        WorkerNodes -->|"Expose"| Service
     end
-    
-    %% AWS Cloud
-    subgraph AWS["AWS Cloud"]
+
+    %% ==================== AWS SERVICES ====================
+    subgraph AWS["☁️ AWS Cloud"]
         ALB["⚖️ Application Load Balancer"]
-        subgraph Database["Database"]
-            RDS["🗄️ Amazon RDS MySQL"]
-        end
-        subgraph Storage["Storage"]
+        
+        subgraph DataLayer["🗄️ Data Layer"]
+            RDS["Amazon RDS MySQL"]
             S3["📁 Amazon S3"]
         end
-        subgraph IaC["Infrastructure"]
-            Terraform["🏗️ Terraform"]
-            Ansible["⚙️ Ansible"]
+        
+        subgraph Infra["🏗️ Infrastructure as Code"]
+            Terraform["Terraform"]
+            Ansible["Ansible"]
         end
     end
-    
-    %% Monitoring
-    subgraph Monitoring["Monitoring"]
+
+    %% ==================== MONITORING ====================
+    subgraph Monitoring["📊 Monitoring Stack"]
         Prometheus["📈 Prometheus"]
         Grafana["📉 Grafana"]
+        Prometheus -->|"Visualize"| Grafana
     end
 
-    %% MAIN FLOW - Developer to Deployment
-    Developer -->|"1. Writes & Pushes Code"| GitHub
-    GitHub -->|"2. Webhook Trigger"| Jenkins
-    Jenkins -->|"3. Checkout Code"| GitHub
-    Jenkins -->|"4. Build Docker Image"| DockerBuild
-    DockerBuild -->|"5. Push to Registry"| DockerPush
-    DockerPush -->|"6. Deploy to K8s"| API
-    
-    %% Kubernetes Internal Flow
-    Control -->|"7. Schedule Pods on EC2"| Workers
-    Workers -->|"8. Expose Application"| Service
-    Service -->|"9. Route Traffic"| ALB
-    ALB -->|"10. User Access via Browser"| Users
-    
-    %% Data & Infrastructure
-    Workers -->|"11. Store Persistent Data"| RDS
-    Workers -->|"12. Store Static Files"| S3
-    Terraform -->|"13. Provision Infrastructure"| ALB
-    Ansible -->|"14. Configure Cluster"| API
-    
-    %% Monitoring
-    Workers -->|"15. Scrape Metrics"| Prometheus
-    Prometheus -->|"16. Visualize Dashboards"| Grafana
+    %% ==================== END USERS ====================
+    Users["👥 End Users"]
 
-    %% Developer Style - RED
-    style Developer fill:#ff4444,stroke:#cc0000,stroke-width:4px,color:#ffffff,font-size:18px,font-weight:bold
+    %% ==================== MAIN FLOW ====================
+    DockerPush -->|"6. Deploy"| API
+    API -->|"7. Schedule"| WorkerNodes
+    Service -->|"8. Route"| ALB
+    ALB -->|"9. Access"| Users
     
-    %% Users Style - BLUE
-    style Users fill:#4A90D9,stroke:#2C5F8A,stroke-width:4px,color:#ffffff,font-size:18px,font-weight:bold
+    %% ==================== DATA FLOWS ====================
+    WorkerNodes -->|"Store Data"| RDS
+    WorkerNodes -->|"Store Files"| S3
+    Terraform -->|"Provision"| ALB
+    Ansible -->|"Configure"| API
+    WorkerNodes -->|"Metrics"| Prometheus
+
+    %% ==================== STYLING ====================
+    %% Layer Colors
+    style CI fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px,color:#333
+    style K8s fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px,color:#333
+    style ControlPlane fill:#fff3e0,stroke:#e65100,stroke-width:2px,color:#333
+    style WorkerNodes fill:#fce4ec,stroke:#c62828,stroke-width:2px,color:#333
+    style AWS fill:#e3f2fd,stroke:#1565c0,stroke-width:2px,color:#333
+    style DataLayer fill:#e0f7fa,stroke:#00695c,stroke-width:2px,color:#333
+    style Infra fill:#e8eaf6,stroke:#283593,stroke-width:2px,color:#333
+    style Monitoring fill:#fff8e1,stroke:#f57f17,stroke-width:2px,color:#333
     
-    %% Subgraph Styles
-    style CI fill:#f3e5f5,stroke:#6a1b9a,stroke-width:2px
-    style K8s fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
-    style Control fill:#fff3e0,stroke:#e65100,stroke-width:2px
-    style Workers fill:#fce4ec,stroke:#c62828,stroke-width:2px
-    style AWS fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
-    style Monitoring fill:#f3e5f5,stroke:#6a1b9a,stroke-width:2px
-    style IaC fill:#e8eaf6,stroke:#283593,stroke-width:2px
-    style Database fill:#e0f7fa,stroke:#00695c,stroke-width:2px
-    style Storage fill:#fff8e1,stroke:#f57f17,stroke-width:2px
+    %% Node Colors
+    style Developer fill:#d32f2f,stroke:#b71c1c,stroke-width:3px,color:#fff,font-weight:bold
+    style Users fill:#1976d2,stroke:#0d47a1,stroke-width:3px,color:#fff,font-weight:bold
+    style GitHub fill:#9c27b0,stroke:#6a1b9a,stroke-width:2px,color:#fff
+    style Jenkins fill:#607d8b,stroke:#37474f,stroke-width:2px,color:#fff
+    style DockerBuild fill:#00acc1,stroke:#006064,stroke-width:2px,color:#fff
+    style DockerPush fill:#00acc1,stroke:#006064,stroke-width:2px,color:#fff
+    style API fill:#ff9800,stroke:#e65100,stroke-width:2px,color:#fff
+    style Scheduler fill:#ffa726,stroke:#e65100,stroke-width:2px,color:#fff
+    style Service fill:#66bb6a,stroke:#2e7d32,stroke-width:2px,color:#fff
+    style ALB fill:#42a5f5,stroke:#1565c0,stroke-width:2px,color:#fff
+    style RDS fill:#26a69a,stroke:#00695c,stroke-width:2px,color:#fff
+    style S3 fill:#ffa726,stroke:#e65100,stroke-width:2px,color:#fff
+    style Terraform fill:#7c4dff,stroke:#4a148c,stroke-width:2px,color:#fff
+    style Ansible fill:#ef5350,stroke:#b71c1c,stroke-width:2px,color:#fff
+    style Prometheus fill:#e53935,stroke:#b71c1c,stroke-width:2px,color:#fff
+    style Grafana fill:#43a047,stroke:#1b5e20,stroke-width:2px,color:#fff
+    style Pod1 fill:#81c784,stroke:#2e7d32,stroke-width:2px,color:#fff
+    style Pod2 fill:#81c784,stroke:#2e7d32,stroke-width:2px,color:#fff
+    style Pod3 fill:#81c784,stroke:#2e7d32,stroke-width:2px,color:#fff
 
-    %% Pure Black Arrows
-    linkStyle default stroke:black,stroke-width:3px,color:black
-
+    %% Arrow Styling
+    linkStyle default stroke:#333,stroke-width:2px,fill:none
 ```
 🔄 CI/CD Pipeline Workflow
 
