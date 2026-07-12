@@ -162,20 +162,8 @@ The complete AWS infrastructure is provisioned using Terraform.
 
 ### 🏗️ Infrastructure Components
 
-Resources Created
-✅ Amazon VPC
-✅ Public Subnets
-✅ Private Subnets
-✅ Internet Gateway
-✅ NAT Gateway
-✅ Route Tables
-✅ Security Groups
-✅ EC2 Instances
-✅ Amazon RDS MySQL
-✅ Amazon S3
-✅ Application Load Balancer
-✅ IAM Roles
 **Resources Created:**
+
 - ✅ Amazon VPC
 - ✅ Public Subnets
 - ✅ Private Subnets
@@ -188,7 +176,9 @@ Resources Created
 - ✅ Amazon S3
 - ✅ Application Load Balancer
 - ✅ IAM Roles
+
 ## ⚙ Technology Stack
+
 | Category | Technologies |
 |---|---|
 | Database | MySQL, Amazon RDS |
@@ -198,10 +188,12 @@ Resources Created
 | Infrastructure as Code | Terraform |
 | Configuration Management | Ansible |
 | Cloud Platform | AWS |
-| Monitoring | Prometheus, Grafana |
+| Monitoring |  Grafana |
 | Image Registry | Docker Hub |
 | Version Control | Git & GitHub |
+
 ## ☁️ AWS Services Used
+
 - Amazon EC2
 - Amazon RDS (MySQL)
 - Amazon VPC
@@ -224,7 +216,9 @@ Resources Created
 - ☁️ Application Load Balancer
 - ☁️ IAM
 - ☁️ Amazon S3
+
 ## 📂 Repository Structure
+
 ```text
 enterprise-devops-platform/
 │
@@ -263,24 +257,9 @@ enterprise-devops-platform/
 ├── README.md
 └── .gitignore
 ```
+
 ## ✨ Key Features
-✅ End-to-End CI/CD Pipeline using Jenkins
-✅ Infrastructure Provisioning using Terraform
-✅ Configuration Management using Ansible
-✅ Dockerized Flask Application
-✅ Docker Hub Image Repository
-✅ Kubernetes Deployments
-✅ Rolling Updates
-✅ Self-Healing Pods
-✅ Replica Management
-✅ Amazon RDS Integration
-✅ Amazon S3 Integration
-✅ Application Load Balancer
-✅ Public & Private Networking
-✅ Secure Security Groups
-✅ Infrastructure Automation
-✅ Production-style DevOps Workflow
-✅ Monitoring Ready with Prometheus & Grafana
+
 - ✅ End-to-End CI/CD Pipeline using Jenkins
 - ✅ Infrastructure Provisioning using Terraform
 - ✅ Configuration Management using Ansible
@@ -297,9 +276,12 @@ enterprise-devops-platform/
 - ✅ Secure Security Groups
 - ✅ Infrastructure Automation
 - ✅ Production-style DevOps Workflow
-- ✅ Monitoring Ready with Prometheus & Grafana
+- ✅ Monitoring Ready 
+  
 ## 🐳 Docker
+
 ### Build Image
+
 ```bash
 docker build -t prayag1/enterprise-devops-platform:latest .
 ```
@@ -318,7 +300,9 @@ docker run -d \
   --name devops-platform \
   prayag1/enterprise-devops-platform:latest
 ```
+
 ## ☸ Kubernetes
+
 ### Deploy Application
 ```bash
 kubectl apply -f k8s/deployment.yaml
@@ -341,7 +325,9 @@ kubectl scale deployment enterprise-devops-platform --replicas=5
 kubectl set image deployment/enterprise-devops-platform \
   enterprise-devops-platform=prayag1/enterprise-devops-platform:latest
 ```
+
 ## 🌍 Terraform
+
 ### Initialize
 ```bash
 cd terraform
@@ -373,17 +359,15 @@ ansible-playbook playbook.yml --syntax-check
 ansible-playbook playbook.yml --check
 ```
 ## 📊 Monitoring
+
 The platform is designed to integrate with modern monitoring tools.
+
 ### Monitoring Stack
-- Prometheus - Metrics Collection
-- Grafana - Dashboards & Visualization
-- Node Exporter - Node Metrics
-- cAdvisor - Container Metrics
-- 📈 **Prometheus** - Metrics Collection
+
 - 📉 **Grafana** - Dashboards & Visualization
-- 🖥️ **Node Exporter** - Node Metrics
-- 🐳 **cAdvisor** - Container Metrics
+
 ### Monitoring Capabilities
+
 - Infrastructure Monitoring
 - Container Monitoring
 - CPU & Memory Utilization
@@ -396,15 +380,9 @@ The platform is designed to integrate with modern monitoring tools.
 - 🏥 Application Health
 - ☸️ Kubernetes Metrics
 - 🔔 Alerting & Dashboards
+
 ## 🔐 Security Features
-🔒 Private Amazon RDS
-🔒 Security Groups
-🔒 IAM Roles
-🔒 Private Networking
-🔒 Public/Private Subnet Separation
-🔒 Least Privilege Access
-🔒 Security Group Rules
-🔒 Network Isolation
+
 - 🔒 Private Amazon RDS
 - 🔒 Security Groups
 - 🔒 IAM Roles
@@ -413,7 +391,9 @@ The platform is designed to integrate with modern monitoring tools.
 - 🔒 Least Privilege Access
 - 🔒 Security Group Rules
 - 🔒 Network Isolation
+
 ## 📈 Future Enhancements
+
 - Kubernetes Ingress Controller
 - Horizontal Pod Autoscaler (HPA)
 - Helm Charts
@@ -440,22 +420,11 @@ The platform is designed to integrate with modern monitoring tools.
 - 🌐 Route53 DNS
 - 🔵🟢 Blue-Green Deployment
 - 🐤 Canary Deployment
+
 ## 🎯 Learning Outcomes
+
 This project demonstrates practical experience with:
-☁️ AWS Cloud
-🔄 DevOps Practices
-🏗️ Infrastructure as Code
-🔄 Continuous Integration
-🚀 Continuous Deployment
-🐳 Docker
-☸ Kubernetes
-🌍 Terraform
-⚙️ Jenkins
-🐙 GitHub
-🐧 Linux Administration
-🌐 Cloud Networking
-📊 Monitoring & Observability
-🔐 Security Best Practices
+
 - ☁️ AWS Cloud
 - 🔄 DevOps Practices
 - 🏗️ Infrastructure as Code
@@ -471,6 +440,7 @@ This project demonstrates practical experience with:
 - 📊 Monitoring & Observability
 - 🔐 Security Best Practices
 ---
+
 ## 👨💻 Author
 
 **Prayag Dutt**
