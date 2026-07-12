@@ -194,17 +194,6 @@ The complete AWS infrastructure is provisioned using Terraform.
 
 ## ☁️ AWS Services Used
 
-- Amazon EC2
-- Amazon RDS (MySQL)
-- Amazon VPC
-- Public & Private Subnets
-- Internet Gateway
-- NAT Gateway
-- Route Tables
-- Security Groups
-- Application Load Balancer
-- IAM
-- Amazon S3
 - ☁️ Amazon EC2
 - ☁️ Amazon RDS (MySQL)
 - ☁️ Amazon VPC
